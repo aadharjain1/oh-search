@@ -1,0 +1,20 @@
+@import './global';
+
+.searchBar{
+    width: 60%;
+    position: relative;
+
+    .searchIcon{
+        position: absolute;
+        width: 14px;
+        top: calc(50% - 7px);
+        left: 10px;
+    }
+    .search{
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 3px 4px 0px #bfbfbf;
+        padding: 12px 10px 12px 35px;
+        width: 100%;
+    }
+}

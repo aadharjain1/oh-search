@@ -1,0 +1,8 @@
+@import './global';
+
+.searchResultsSection{
+    @include flexColumn;
+    @include flexVAlign;
+    padding: 20px 0 0 0;
+    width: 80%;
+}

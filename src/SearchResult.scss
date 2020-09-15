@@ -1,0 +1,40 @@
+@import './global';
+
+.searchResult{
+    @include flexRow;
+    width: 60%;
+    padding: 20px 0;
+
+    .profileImage{
+        @include flexRow;
+        @include flexCenter;
+        width: 15%;
+        border-radius: 5px;
+        
+        img{
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+
+    .content{
+        @include flexColumn;
+        justify-content: space-around;
+        padding: 0 0 0 25px;
+        width: 85%;
+
+        .link{
+            color: #737373;
+            font-size: 0.75rem;
+        }
+        .title{
+            color: #1a1a1a;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .description{
+            font-size: 0.78rem;
+            color: #1a1a1a;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import './global';
+
+.pageList{
+    @include flexRow;
+    @include flexCenter;
+    list-style-type: none;
+    cursor: pointer;
+
+    .pageNumber{
+        padding: 5px 10px;
+        margin: 0 10px;
+        border-radius: 5px;
+    }
+    .selectedPage{
+        background-color: #EF5C33;
+        color: #fff;
+    }
+}

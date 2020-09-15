@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './Header';
+import SearchResultsSection from './SearchResultsSection';
+import Pagination from './Pagination';
+import './App.scss';
 
-function App() {
+const App = () => {
+  const [searchResults, setSearchResults] = useState([]);
+  const [currentPageResults, setCurrentPageResults] = useState([]);
+  const [isSearchDirty, setIsSearchDirty] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header setSearchResults={setSearchResults} setIsSearchDirty={setIsSearchDirty} />
+      <SearchResultsSection currentPageResults={currentPageResults} isSearchDirty={isSearchDirty} />
+      <Pagination searchResults={searchResults} setCurrentPageResults={setCurrentPageResults} />
     </div>
   );
 }
