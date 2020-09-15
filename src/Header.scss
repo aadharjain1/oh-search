@@ -5,13 +5,15 @@
     @include flexVAlign;
     height: 60px;
     padding: 5px 10px;
-}
-.headerContents{
-    @include flexRow;
-    @include flexSpaceBetween;
-    width: 60%;
-}
-.logo{
-    color: #EF5C33;
-    font-size: 1.8rem;
+    
+    .headerContents{
+        @include flexRow;
+        @include flexSpaceBetween;
+        width: 60%;
+        
+        .logo{
+            color: #EF5C33;
+            font-size: 1.8rem;
+        }
+    }
 }
